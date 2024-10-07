@@ -1,0 +1,15 @@
+<!-- prettier-ignore -->
+{% extends 'mysite/base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero">
+  <img
+    src="{% static 'images/rocketdab.png' %}"
+    alt="An astronaut on a rocket dabbing"
+  />
+  <article class="hero-text">
+    <h2>Main Business Principle</h2>
+    <p>Short description of business</p>
+  </article>
+</section>
+{% endblock %}

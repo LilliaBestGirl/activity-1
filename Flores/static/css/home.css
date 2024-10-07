@@ -1,0 +1,53 @@
+.hero {
+  min-height: calc(100vh - 68px);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  width: 50%;
+  margin: auto 0;
+}
+
+.hero-text h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  max-width: 28rem;
+  text-align: left;
+}
+
+.hero-text p {
+  max-width: 28rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 890px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text h2 {
+    text-align: center;
+    font-size: 2.75rem;
+    line-height: 1;
+  }
+
+  .hero-text p {
+    text-align: center;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}

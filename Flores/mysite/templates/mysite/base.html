@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 1</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.ico' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  </head>
+  <!-- prettier-ignore -->
+  <body>
+    <header>
+      <h2>Activity 1</h2>
+      <ul class="nav-links">
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+      <a
+        class="cta md-hide"
+        href="https://github.com/LilliaBestGirl"
+        target="_blank"
+        >Github</a
+      >
+      <div class="dropdown">
+        <button class="dropdown-btn md-show">&#9776;</button>
+        <div class="dropdown-items md-show">
+          <a href="{% url 'homepage' %}">Home</a>
+          <a href="{% url 'about' %}">About</a>
+          <a href="{% url 'contact' %}">Contact</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
